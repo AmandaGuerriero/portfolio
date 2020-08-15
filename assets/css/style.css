@@ -1,0 +1,110 @@
+/* Global Styles Start */
+:root {
+    --teal-blue: #64a6bd;
+    --blue-gray: #90A8C3;
+    --blue-purple: #ADA7C9;
+    --pink-purple: #D7B9D5;
+    --pink: #F4CAE0;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--pink-purple);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+section {
+    padding: 10px;
+}
+/* Global Styles End */
+
+/* Header Styles Start */
+header {
+    background: var(--teal-blue);
+    position: sticky;
+    position: -webkit-sticky; /* For Safari Browsers */
+    z-index: 9999;
+    display: flex;
+    background-size: cover;
+    justify-content: space-between;
+    top: 0;
+    padding: 10px 15px;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+header nav {
+    margin: 10px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header nav ul li {
+    font-size: 18px;
+    padding: 10px;
+}
+
+header nav ul li:hover {
+    font-weight: bolder;
+    background-color: var(--blue-gray);
+    border-radius: 30%;
+}
+
+
+/* Header Styles End */
+
+/* Contact Me Styles Start */
+
+.contact {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contact-info ul {
+    display: flex;
+    padding: 0px 40px;
+    justify-content: flex-end;
+}
+
+.contact-info ul li {
+    list-style: none;
+    padding: 0px 40px;
+}
+
+
+/* Contact Me Styles End */
+
+
+/* Footer Styles Start */
+footer {
+    background: var(--teal-blue);
+    display: flex;
+    background-size: cover;
+    padding: 20px 15px;
+    text-align: right;
+    color: var(--white);
+    display: block;
+    font-weight: lighter;
+    text-align: right;
+}
+/* Footer Styles End */
