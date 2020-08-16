@@ -16,7 +16,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -33,9 +32,9 @@ header {
     position: -webkit-sticky; /* For Safari Browsers */
     z-index: 9999;
     display: flex;
+    padding: 10px;
     justify-content: space-between;
     top: 0;
-    padding: 10px 15px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -113,33 +112,48 @@ section h2 {
     font-size: 50px;
     text-align: right;
     font-weight: normal;
+    display: block;
 }
 
 .about, .work, .contact {
     display: flex;
     align-items: center;
+    padding-top: 20px;
 }
 
 .about-header, .work-header, .contact-header {
-    width: 15%;
-    padding-left: 20px;
-    margin: 10px 10px 10px 175px;
+    padding-right: 45px;
+    margin: 10px 10px 10px 150px;
 }
 
-.about-details p, .work-grid-wrapper, .contact-info {
-    width: 90%;
+.about-details, .work-grid-wrapper, .contact-info {
+    width: 85%;
     border-left: solid;
     padding-left: 30px;
     justify-content: flex-start;
     font-size: 15px;
+    display: flex;
 }
 /* Global Section Styles End */
 
 /* About Me Styles Start */
+.about-details img {
+    height: 200px;
+}
+
+.about-details p {
+    padding-left: 10px;
+}
+
 
 /* About Me Styles End */
 
 /* My Work Styles Start */
+
+.work-grid-wrapper {
+    /* position: relative; */
+}
+
 .work-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -165,7 +179,12 @@ section h2 {
     height: 35%;
     width: 55%;
     box-sizing: border-box;
+    flex-direction: column;
 }
+
+/* .work-grid-item h3 {
+    font-size: 24px;
+} */
 
 .work-grid-item h3, h4{
     width: 100%;
@@ -187,38 +206,37 @@ section h2 {
     display: flex;
 }
 
-.work-grid-item.work-2, .work-grid-item.work-3, .work-grid-item.work-4, .work-grid-item.work-5 {
-    /* flex-wrap: flex; */
-}
+/* .work-grid-item.work-2, .work-grid-item.work-3, .work-grid-item.work-4, .work-grid-item.work-5 {
+    flex-wrap: flex;
+} */
 
-/* .work-grid-item.work-1 img {
+.work-grid-item.work-1 {
     background-image: url(../images/run-buddy.png);
     background-size: cover;
     background-position: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: flex-end;
-    background-attachment: fixed;
-}  */
+    background-position-x: center;
+} 
+
+.work-grid-item.work-2 {
+    background-image: url(../images/Horiseon.png);
+    background-size: cover;
+    background-position: 100%;
+} 
+
 /* My Work Styles End */
 
 /* Contact Me Styles Start */
 
 .contact-info ul {
     display: flex;
-    padding: 0px 40px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     height: 100px;
     width: 90%;
-    
 }
 
 .contact-info ul li {
     list-style: none;
-    padding: 0px 40px;
     text-decoration: underline;
     font-weight: bolder;
     font-size: 24px;
@@ -288,10 +306,14 @@ footer {
         flex-wrap: wrap;
     }
 
+    .work {
+        background-color: var(--blue-purple);
+    }
+
     .about-header, .work-header, .contact-header {
         width: 100%;
         margin: unset;
-        padding-bottom: 30px;
+        padding: 0px 0px 20px 0px;
     }
 
     .about-header h2, .work-header h2, .contact-header h2{
@@ -300,10 +322,11 @@ footer {
         text-align: center;
     }
     
-    .about-details p, .work-grid-wrapper, .contact-info {
+    .about-details, .work-grid-wrapper, .contact-info {
         border: unset;
         width: 100%;
         justify-content: center;
+        padding: 0px;
     }
 }
 
@@ -330,6 +353,11 @@ footer {
 /* MQ for screens smaller that 575px */
 @media screen and (max-width: 575px) {
     /* Header */
+    
+    body {
+        padding: auto;
+    }
+    
     header h1 {
         
     }
@@ -348,5 +376,17 @@ footer {
     .hero-phrase {
         padding: unset;
         text-align: center;
+    }
+
+    .about {
+        padding: 0px
+    }
+
+    .about-details {
+        flex-wrap: wrap;
+    }
+
+    .about-details p {
+        padding-top: 20px;
     }
 }
