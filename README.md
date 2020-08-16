@@ -4,6 +4,7 @@
 A way to show off the work I'm doing as I build on my web development skills. Check back for updates often.
 
 ## Built With
+
 * HTML
 * CSS
 
@@ -11,7 +12,11 @@ A way to show off the work I'm doing as I build on my web development skills. Ch
 https://amandaguerriero.github.io/portfolio/
 
 ## Screenshots
-![My Portfolio](https://raw.githubusercontent.com/AmandaGuerriero/portfolio/master/assets/images/lights.jpg)
+### Desktop
+![My Portfolio](https://github.com/AmandaGuerriero/portfolio/blob/master/assets/images/Portfolio-1.png?raw=true)
+
+### Mobile
+![My Portfolio Mobile](https://github.com/AmandaGuerriero/portfolio/blob/master/assets/images/Portfolio-2.png?raw=true)
 
 ## Contribution
 Made with ❤️ by Amanda Guerriero!
