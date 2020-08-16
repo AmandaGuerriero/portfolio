@@ -5,8 +5,6 @@
     --blue-purple: #ADA7C9;
     --pink-purple: #D7B9D5;
     --pink: #F4CAE0;
-
-    /* Formatted Colors */
     --primary-text-color: #ffffff;
     --section-header: #1c2e4a;
     --black-rgb: 0, 0, 0;
@@ -22,7 +20,6 @@ body {
     background: var(--pink-purple);
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
-
 /* Global Styles End */
 
 /* Header Styles Start */
@@ -107,6 +104,12 @@ section {
     padding: 10px;
 }
 
+section.main-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
 section h2 {
     color: var(--section-header);
     font-size: 50px;
@@ -117,13 +120,14 @@ section h2 {
 
 .about, .work, .contact {
     display: flex;
+    flex-direction: wrap;
     align-items: center;
     padding-top: 20px;
 }
 
 .about-header, .work-header, .contact-header {
-    padding-right: 45px;
     margin: 10px 10px 10px 150px;
+    justify-content: flex-end;
 }
 
 .about-details, .work-grid-wrapper, .contact-info {
@@ -143,17 +147,11 @@ section h2 {
 
 .about-details p {
     padding-left: 10px;
+    padding-bottom: 20px;
 }
-
-
 /* About Me Styles End */
 
 /* My Work Styles Start */
-
-.work-grid-wrapper {
-    /* position: relative; */
-}
-
 .work-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -182,10 +180,6 @@ section h2 {
     flex-direction: column;
 }
 
-/* .work-grid-item h3 {
-    font-size: 24px;
-} */
-
 .work-grid-item h3, h4{
     width: 100%;
     padding: 10px 10px;
@@ -199,34 +193,52 @@ section h2 {
     font-size: 12px;
 }
 
+/* Work Cell Images and Styles */
 .work-grid-item.work-1 {
-    grid-column: 1 / span 2;
-    grid-row: 1 /span 2;
     flex-wrap: wrap;
     display: flex;
-}
-
-/* .work-grid-item.work-2, .work-grid-item.work-3, .work-grid-item.work-4, .work-grid-item.work-5 {
-    flex-wrap: flex;
-} */
-
-.work-grid-item.work-1 {
     background-image: url(../images/run-buddy.png);
     background-size: cover;
     background-position: 100%;
-    background-position-x: center;
-} 
+    grid-column: 1 / span 2;
+    grid-row: 1 /span 2;
+}
 
 .work-grid-item.work-2 {
     background-image: url(../images/Horiseon.png);
     background-size: cover;
     background-position: 100%;
+    flex-wrap: wrap;
+    display: flex;
+} 
+
+.work-grid-item.work-3 {
+    background-image: url(../images/placeholder-1.jpg);
+    background-size: cover;
+    background-position: 100%;
+    flex-wrap: wrap;
+    display: flex;
+} 
+
+.work-grid-item.work-4{
+    background-image: url(../images/placeholder-2.jpg);
+    background-size: cover;
+    background-position: 100%;
+    flex-wrap: wrap;
+    display: flex;
+} 
+
+.work-grid-item.work-5 {
+    background-image: url(../images/placeholder-3.jpg);
+    background-size: cover;
+    background-position: 100%;
+    flex-wrap: wrap;
+    display: flex;
 } 
 
 /* My Work Styles End */
 
 /* Contact Me Styles Start */
-
 .contact-info ul {
     display: flex;
     justify-content: space-evenly;
@@ -246,10 +258,7 @@ section h2 {
     text-decoration: none;
     color: var(--section-header);
 }
-
-
 /* Contact Me Styles End */
-
 
 /* Footer Styles Start */
 footer {
@@ -301,13 +310,9 @@ footer {
         font-size: 25px;
     }
 
-    /* About */
+    /* Global Section Styles */
     .about, .work, .contact {
         flex-wrap: wrap;
-    }
-
-    .work {
-        background-color: var(--blue-purple);
     }
 
     .about-header, .work-header, .contact-header {
@@ -328,6 +333,10 @@ footer {
         justify-content: center;
         padding: 0px;
     }
+
+    .work {
+        background-color: var(--blue-purple);
+    }
 }
 
 /* MQ for screens smaller that 768px */
@@ -344,11 +353,10 @@ footer {
 
     .work-grid-container {
         grid-template-columns: 1fr;
-        grid-template-columns: repeat (5 1fr);
+        grid-template-rows: repeat (5 1fr);
         justify-content: center;
     }
 }
-
 
 /* MQ for screens smaller that 575px */
 @media screen and (max-width: 575px) {
@@ -356,10 +364,6 @@ footer {
     
     body {
         padding: auto;
-    }
-    
-    header h1 {
-        
     }
 
     header nav ul{
@@ -378,6 +382,7 @@ footer {
         text-align: center;
     }
 
+    /* About */
     .about {
         padding: 0px
     }
@@ -389,4 +394,5 @@ footer {
     .about-details p {
         padding-top: 20px;
     }
+
 }
