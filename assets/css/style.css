@@ -5,18 +5,23 @@
     --blue-purple: #ADA7C9;
     --pink-purple: #D7B9D5;
     --pink: #F4CAE0;
-    --primaery-text-color: #ffffff;
+
+    /* Formatted Colors */
+    --primary-text-color: #ffffff;
     --section-header: #1c2e4a;
+    --black-rgb: 0, 0, 0;
+    --white-rgb: 255, 255, 255;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background: var(--pink-purple);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 /* Global Styles End */
@@ -28,11 +33,11 @@ header {
     position: -webkit-sticky; /* For Safari Browsers */
     z-index: 9999;
     display: flex;
-    background-size: cover;
     justify-content: space-between;
     top: 0;
     padding: 10px 15px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header h1 {
@@ -41,7 +46,8 @@ header h1 {
 
 header a {
     text-decoration: none;
-    color: var(--primaery-text-color);
+    color: var(--primary-text-color);
+    text-shadow: 0 2px 10px rgba(var(--black-rgb), 0.5);
 }
 
 header nav {
@@ -55,52 +61,90 @@ header nav ul {
     list-style: none;
 }
 
+header nav ul:hover {
+    color: var(--teal-blue);
+}
+
 header nav ul li {
     font-size: 18px;
-    padding: 10px;
+    padding: 5px 20px;
 }
 
 header nav ul li:hover {
     font-weight: bolder;
     background-color: var(--blue-gray);
-    border-radius: 30%;
+    border-radius: 35%;
 }
-
-
 /* Header Styles End */
 
-/* Global Section Styles Start */
+/* Hero Styles Start */
+.hero {
+    background-image: url(../images/lights.jpg);
+    background-size: cover;
+    background-position: 70%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-attachment: fixed;
+}
 
+.hero-phrase h2 {
+    background-color: var(--teal-blue);
+    opacity: .95;
+    padding: 5px 10px;
+    box-sizing: content-box;
+    width: 100%;
+    color: var(--primary-text-color);
+    text-shadow: 0 2px 10px rgba(var(--black-rgb), 0.5);
+    text-align: center;
+    font-size: 30px;
+}
+
+.hero-phrase {
+    padding-right: 12%;
+}
+/* Hero Styles End */
+
+/* Global Section Styles Start */
 section {
     padding: 10px;
 }
 
 section h2 {
     color: var(--section-header);
-    font-size: 30px;
+    font-size: 50px;
     text-align: right;
+    font-weight: normal;
 }
 
 /* About Me Styles Start */
 
-.flex-row {
-    width: 100%;
+.about {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
     align-items: center;
 }
 
-.flex-row h2 {
-    flex: 15%;
-    border-right: solid;
-    padding-right: 10px;
+.about-header {
+    width: 15%;
     margin-right: 20px;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    padding-left: 20px;
+    margin: 10px 10px 10px 200px;
 }
 
-.flex-row p {
-    flex: 80%;
+.about-details p {
+    width: 90%;
+    padding-left: 10px;
+    border-left: solid;
+    padding-left: 30px;
+    justify-content: flex-start;
+    font-size: 15px;
 }
+
 /* About Me Styles End */
 
 /* My Work Styles Start */
@@ -142,7 +186,7 @@ footer {
     background-size: cover;
     padding: 20px 15px;
     text-align: right;
-    color: var(--primaery-text-color);
+    color: var(--primary-text-color);
     display: block;
     font-weight: lighter;
     text-align: right;
@@ -153,31 +197,77 @@ footer {
 
 /* MQ for screens smaller than 980px */
 @media screen and (max-width: 980px) {
+    /* Header */
     header {
         position: relative;
         padding-bottom: 0;
+        justify-content: center;
     }
 
     header h1 {
         width: 100%;
-        font-size: 25px;
+        font-size: 30px;
+        text-align: center;
+        border-bottom: 2px solid white;
     }
 
     header nav ul {
         width: 100%;
+        padding-top: 10px;
+    }
+
+    header nav ul li {
+        font-size: 15px;
+    }
+    
+    /* Hero */
+    .hero {
+        height: 175px;
+    }
+
+    .hero-phrase h2 {
+        font-size: 25px;
+    }
+
+    /* About */
+    .about {
+        flex-wrap: wrap;
+    }
+
+    .about-header {
+
     }
 }
 
 /* MQ for screens smaller that 768px */
 @media screen and (max-width: 768px) {
-
+    /* Hero */
+    .hero {
+        height: 125px;
+        justify-content: center;
+    }
 }
 
 
 /* MQ for screens smaller that 575px */
 @media screen and (max-width: 575px) {
+    /* Header */
     header h1 {
-        text-align: center;
+        
     }
 
+    header nav ul{
+        width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+        height: 75px;
+        justify-content: center;
+        padding-right: 0%;
+    }
+
+    .hero-phrase {
+        
+    }
 }
