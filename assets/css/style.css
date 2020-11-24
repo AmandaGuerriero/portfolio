@@ -209,23 +209,23 @@ h2 {
 /* Grid Images */
 
 .grid-item.work-1 {
-    background-image: url(../images/sitetour.gif);
+    background-image: url(../images/Bossy-Bartender.png);
 } 
 
 .grid-item.work-2 {
-    background-image: url(../images/weather.png);
+    background-image: url(../images/Spaced-Out.png);
 } 
 
 .grid-item.work-3 {
-    background-image: url(../images/taskmaster.png);
+    background-image: url(../images/weather.png);
 } 
 
 .grid-item.work-4{
-    background-image: url(../images/password.png);
+    background-image: url(../images/taskmaster.png);
 } 
 
 .grid-item.work-5 {
-    background-image: url(../images/work-day.png);
+    background-image: url(../images/password.png);
 } 
 /* Grid Styles End */
 
